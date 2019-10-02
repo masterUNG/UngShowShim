@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ungshowshim/screens/my_style.dart';
+import 'package:ungshowshim/screens/register.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -23,7 +25,7 @@ class _HomeState extends State<Home> {
       'Ung Show Shim',
       style: TextStyle(
         fontSize: 30.0,
-        color: Colors.brown.shade700,
+        color: MyStyle().textColor,
         fontWeight: FontWeight.bold,
         fontStyle: FontStyle.italic,
         fontFamily: 'Mansalva',
@@ -33,7 +35,7 @@ class _HomeState extends State<Home> {
 
   Widget singInButton() {
     return RaisedButton(
-      color: Colors.brown.shade700,
+      color: MyStyle().textColor,
       child: Text(
         'Sign In',
         style: TextStyle(color: Colors.white),
@@ -45,7 +47,13 @@ class _HomeState extends State<Home> {
   Widget signUpButton() {
     return OutlineButton(
       child: Text('Sign Up'),
-      onPressed: () {},
+      onPressed: () {
+        print('You Click Sign Up');
+
+        MaterialPageRoute materialPageRoute = MaterialPageRoute(builder: (BuildContext context) => Register()); //ภาษาไทยได้ครับ
+        Navigator.of(context).push(materialPageRoute);
+
+      },
     );
   }
 
