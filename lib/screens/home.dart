@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
 
   Widget showAppName() {
     return Text(
-      'Ung Show Shim',
+      'Ung Show Shim 123',
       style: TextStyle(
         fontSize: 30.0,
         color: MyStyle().textColor,
